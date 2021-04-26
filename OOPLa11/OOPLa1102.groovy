@@ -5,7 +5,7 @@ String.metaClass.isPalindrome = {->
     lettersOnly = symbols.findAll{ letterPattern.matcher(it).matches() }
     lettersOnlyString = lettersOnly.join("")
 
-    return lettersOnlyString == lettersOnlyString.reverse();
+    return lettersOnlyString.toLowerCase() == lettersOnlyString.toLowerCase().reverse();
 }
 
 println 'm1o0m'.isPalindrome()
